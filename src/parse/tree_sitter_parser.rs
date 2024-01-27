@@ -76,7 +76,7 @@ extern "C" {
     fn tree_sitter_elm() -> ts::Language;
     fn tree_sitter_elvish() -> ts::Language;
     fn tree_sitter_erlang() -> ts::Language;
-    fn tree_sitter_f_sharp() -> ts::Language;
+    fn tree_sitter_fsharp() -> ts::Language;
     fn tree_sitter_gleam() -> ts::Language;
     fn tree_sitter_go() -> ts::Language;
     fn tree_sitter_hare() -> ts::Language;
@@ -388,7 +388,7 @@ pub(crate) fn from_language(language: guess::Language) -> TreeSitterConfig {
             }
         }
         FSharp => {
-            let language = unsafe { tree_sitter_f_sharp() };
+            let language = unsafe { tree_sitter_fsharp() };
             TreeSitterConfig {
                 language,
                 atom_nodes: [
